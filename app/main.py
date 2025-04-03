@@ -1,3 +1,4 @@
+import uvicorn
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 from fastapi.exceptions import RequestValidationError
@@ -21,3 +22,6 @@ app.include_router(items.router)
 @app.get("/", include_in_schema=False)
 async def docs_redirect() -> RedirectResponse:
     return RedirectResponse(url='/docs')
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)

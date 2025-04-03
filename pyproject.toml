@@ -1,0 +1,16 @@
+[project]
+name = "fastapi-container-app-starter"
+version = "0.1.0"
+description = "A base template for FastAPI applications with Docker to run in Azure Container Apps."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi[standard]>=0.115.12",
+    "pydantic>=2.11.1",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0",
+    "pytest>=8.3.5",
+]
